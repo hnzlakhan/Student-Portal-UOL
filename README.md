@@ -6,7 +6,7 @@ http://localhost:8080/LAB6/faces/home.xhtml
 
 Must add **ooselab6.sql** file in database.
 
-Problem Statement:
+**Problem Statement:**
 JavaServer Faces JSF is the current front-end technology for building web-based applications
 in the Java Enterprise Edition platform JavaEE and in this pandemic covid-19 in most of the
 countries situation is worst so government implemented lockdown so people require platform
@@ -14,7 +14,7 @@ to where they can find all the paid and free courses whether it is on software d
 business administration. To done this work I choose java server faces as it is considered the
 easiest approach for implementing the prototype. However, this approach limits the JSF to be
 fully dependent on the currently available components and themes.
-JSF has been designed to include many of the needed technical requirements for modern web- applications to achieve a RAD approach, including:
+JSF has been designed to include many of the needed technical requirements for modern web- applications to achieve a RAD approach, **including:**
 • MVC through views and managed beans.
 • Automatic binding between user-interface components and server-side counterparts using
 expression language
@@ -23,7 +23,7 @@ expression language
 • Built-in validation for input fields(Validators)
 • AJAX support
  
-Proposed Solution:
+**Proposed Solution:**
 For this current situation I developed a website titled as Student portal where people all around
 the world can find paid and free courses on different types of subjects as people requires this
 badly in lockdown situation as they require to study courses this to build their skills on different
