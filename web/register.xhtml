@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+       xmlns:p="http://primefaces.org/ui"   
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>LAB PROJECT OOSE</title>
+        <style>
+            
+            
+            
+          
+        </style>   
+        
+    </h:head>
+    <h:body id="top">
+        <ui:composition template="layout.xhtml">
+
+	<ui:define name="content" >
+        <center>
+	<h:form>
+            <h3 >----------(Student Form )----------</h3>
+             <p:fieldset legend="Insert Details" toggleable="true" toggleSpeed="500"> 
+           
+            <h:panelGrid style=" text-align: center"  >
+                 <p:growl id="msgs" showDetail="true"  />
+               
+                
+                     <p:outputLabel  >Student Name :</p:outputLabel>
+                     <p:inputText  value="#{javause.sname}" a:placeholder="Enter Student name" id="sname">
+                     <f:validateLength minimum="5" maximum="10"></f:validateLength>
+                     </p:inputText>
+                     <h:message for="sapid" style="color:red"></h:message>
+                      
+                 
+                     
+                     <p:outputLabel  >Father Name :</p:outputLabel>
+                     <p:inputText  value="#{javause.fname}" a:placeholder="Enter Father name" id="fname">
+                     <f:validateLength minimum="5" maximum="10"></f:validateLength>
+                     </p:inputText>
+                     <h:message for="fname" style="color:red"></h:message>
+
+                    
+                     <p:outputLabel  >SAP ID :</p:outputLabel>
+                     <p:inputText value="#{javause.sapid}" id="sapid" a:placeholder="Enter 8 digit id" >
+                     <f:validateLength minimum="8" maximum="8"></f:validateLength>
+                     </p:inputText>
+                     <h:message for="sapid" style="color:red"></h:message>
+		   
+                      
+                        
+             
+                       
+                        <p:outputLabel  >Department :</p:outputLabel>
+                        <h:selectOneMenu value="#{javause.dept}" id="sdept" > 
+                        <f:selectItem itemValue = "BBA" itemLabel = "BBA " /> 
+                        <f:selectItem itemValue = "Software" itemLabel = "Software" />
+                        <f:selectItem itemValue = "MBBS" itemLabel = "MBBS" /> 
+                        <f:selectItem itemValue = "Aviation" itemLabel = "Aviation" /> 
+                        <f:selectItem itemValue = "BDS" itemLabel = "BDS" /> 
+                        <f:validateRequired></f:validateRequired>
+                        </h:selectOneMenu>
+                        <h:message for="sdept" style=" color: red"></h:message>
+                        
+                        
+                        <p:outputLabel  >Batch :</p:outputLabel>
+                        <h:selectOneMenu value="#{javause.batch}" id="sbatch" > 
+                        <f:selectItem itemValue = "2018" itemLabel = "2018 " /> 
+                        <f:selectItem itemValue = "2019" itemLabel = "2019" />
+                        <f:selectItem itemValue = "2020" itemLabel = "2020" /> 
+                        <f:selectItem itemValue = "2021" itemLabel = "2021" /> 
+                        <f:selectItem itemValue = "2022" itemLabel = "2022" /> 
+                        <f:validateRequired></f:validateRequired>
+                        </h:selectOneMenu>
+                        <h:message for="sbatch" style=" color: red"></h:message>
+                        
+                   
+     
+                        
+                      
+                            
+                     <p:outputLabel for="country" value="Country: "/>
+                     <h:selectOneMenu id="country" value="#{javause.country}" style="width:150px">
+                         <p:ajax listener="#{javause.onCountryChange}" update="city"/>
+                    <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true"/>
+                    <f:selectItems value="#{javause.countries}"/>
+                    </h:selectOneMenu>
+                     
+                    
+                     <p:outputLabel  >City :</p:outputLabel>
+                        <h:selectOneMenu value="#{javause.city}" id="city" > 
+                        <f:selectItem itemValue = "Lahore" itemLabel = "Lahore " /> 
+                        <f:selectItem itemValue = "Karachi" itemLabel = "Karachi" />
+                        <f:selectItem itemValue = "Faislabad" itemLabel = "Faislabad" /> 
+                        <f:selectItem itemValue = "Gujranwala" itemLabel = "Gujranwala" /> 
+                        <f:selectItem itemValue = "Multan" itemLabel = "Multan" /> 
+                        <f:validateRequired></f:validateRequired>
+                        </h:selectOneMenu>
+                        <h:message for="city" style=" color: red"></h:message>  
+                            
+                        
+                        
+                       
+                       
+                        
+                            
+                    <h:commandButton value="insert record " action="#{javause.insert(javause.sname,javause.fname,javause.sapid,javause.dept,javause.batch,javause.city)}" ></h:commandButton>
+            
+
+                        
+                           </h:panelGrid>
+             
+	</p:fieldset>
+	</h:form>
+
+        </center>
+              </ui:define></ui:composition>
+</h:body>
+</html>
+

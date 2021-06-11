@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US"
+xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+	>
+ <h:head>
+   <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+      <title>LAB OOSE PROJECT</title>
+     
+      
+      
+     
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+   <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+  
+      
+ </h:head>
+    <h:body>
+<f:view> 
+
+	<div>
+ 
+	    <div>
+		<ui:insert name="header" >
+		  <ui:include src="header.xhtml" />
+		</ui:insert>
+	    </div>
+ 
+	    <div>
+	  	<ui:insert name="content" >
+	 	  <ui:include src="content.xhtml" />
+	   	</ui:insert>
+	    </div>
+ 
+	    <div>
+	    	<ui:insert name="footer" >
+	    	  <ui:include src="footer.xhtml" />
+	    	</ui:insert>
+    	    </div>
+ 
+        </div>
+ 
+</f:view>
+        <script src="bootstrap/js/jquery.min.js "></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+    </h:body>
+</html>

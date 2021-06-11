@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Student Register</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+        <style>
+            .label{
+                color: white;
+            }
+            
+        </style>    
+        
+    </h:head>
+    <h:body  >
+        
+        <center>
+            <h2>-------(Student Form)-------</h2>
+            <p:fieldset legend="Insert Details" toggleable="true" toggleSpeed="500"> 
+            
+        <h:form>
+            
+            <p:column>
+                <f:facet name="header">Student name</f:facet>
+         
+                <p:inputText  value="#{javause.sname}" a:placeholder="Enter student name" id="sname">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Father name</f:facet>
+                <p:inputText  value="#{javause.fname}" a:placeholder="Enter father name" id="fname">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Sap id</f:facet>
+                <p:inputText  value="#{javause.sapid}" a:placeholder="Enter sap id" id="sapid">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Department</f:facet>
+                <p:inputText  value="#{javause.dept}" a:placeholder="Enter department" id="dept">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">batch</f:facet>
+                <p:inputText  value="#{javause.batch}" a:placeholder="Enter batch" id="batch">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">City</f:facet>
+                <p:inputText  value="#{javause.city}" a:placeholder="Enter city" id="city">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            
+            <h:commandButton value="insert record " action="#{javause.insert(javause.sname,javause.fname,javause.sapid,javause.dept,javause.batch,javause.city)}" ></h:commandButton>
+            
+        </h:form>
+            </p:fieldset>
+             <br></br>
+      <br></br>
+            
+            <p:fieldset  legend="Student Details" toggleable="true" toggleSpeed="500">
+    
+      
+      
+      <h:form>
+          <p:dataTable id="tbl"  value="#{register.regList}" var="Studentc"  widgetVar="studentsTable"   
+                       emptyMessage="No Students found with given criteria" 
+                       filteredValue="#{register.filteredstudents1}">
+		
+              
+              <f:facet name="header" >
+                <div >
+                    <span>List of Students</span>
+                   
+                </div>
+            </f:facet>
+              
+
+                    <p:column headerText="Name" sortBy="#{Studentc.sname}" filterBy="#{Studentc.sname}" >
+			<f:facet  name="header">Student name</f:facet>
+         #{Studentc.sname}
+      </p:column>
+              <p:column headerText="Name" sortBy="#{Studentc.fname}" filterBy="#{Studentc.fname}">
+			<f:facet name="header">Father Name</f:facet>
+         #{Studentc.fname}
+      </p:column>
+              <p:column headerText="Name" sortBy="#{Studentc.sapid}" filterBy="#{Studentc.sapid}">
+			<f:facet name="header">SAP ID</f:facet>
+           #{Studentc.sapid}
+       </p:column>
+              <p:column headerText="Name" sortBy="#{Studentc.dept}" filterBy="#{Studentc.dept}">
+			<f:facet name="header">Department</f:facet>
+           #{Studentc.dept}
+       </p:column>
+              <p:column headerText="Name" sortBy="#{Studentc.batch}" filterBy="#{Studentc.batch}">
+			<f:facet name="header">Batch</f:facet>
+           #{Studentc.batch}
+       </p:column>
+              <p:column headerText="Name" sortBy="#{Studentc.city}" filterBy="#{Studentc.city}">
+			<f:facet name="header">City</f:facet>
+           #{Studentc.city}
+       </p:column>
+              <p:column  >
+                  
+                   <h:commandButton value="DELETE" action="#{javause.delete(Studentc.sname)}" ></h:commandButton>
+                   
+              </p:column>
+             
+	</p:dataTable>
+          
+        
+      <p:commandButton value="EXPORT PDF" >
+                    <p:dataExporter type="pdf" target="tbl" fileName="register"/>
+                </p:commandButton>   
+          
+      </h:form>
+               
+      </p:fieldset>
+      <br></br>
+      <br></br>
+      
+      <p:fieldset legend="Update Details" toggleable="true" toggleSpeed="500"> 
+            
+        <h:form>
+            
+            <p:column>
+                <f:facet name="header">Student name</f:facet>
+         
+                <p:inputText  value="#{javause.sname}" a:placeholder="Enter student name" id="sname">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Father name</f:facet>
+                <p:inputText  value="#{javause.fname}" a:placeholder="Enter father name" id="fname">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Sap id</f:facet>
+                <p:inputText  value="#{javause.sapid}" a:placeholder="Enter sap id" id="sapid">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">Department</f:facet>
+                <p:inputText  value="#{javause.dept}" a:placeholder="Enter department" id="dept">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">batch</f:facet>
+                <p:inputText  value="#{javause.batch}" a:placeholder="Enter batch" id="batch">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            <p:column>
+                <f:facet name="header">City</f:facet>
+                <p:inputText  value="#{javause.city}" a:placeholder="Enter city" id="city">
+                     
+                     </p:inputText>
+                     
+            </p:column>
+            
+            <h:commandButton value="Update record " action="#{javause.update(javause.sname,javause.fname,javause.sapid,javause.dept,javause.batch,javause.city)}" ></h:commandButton>
+            
+        </h:form>
+            </p:fieldset>
+        
+        
+        </center>
+    </h:body>
+</html>
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US"
+xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+       
+    
+    </h:head>
+    
+   <h:body id="top">
+
+      <ui:composition template="layout.xhtml">
+
+	<ui:define name="content">
+     
+     
+         
+
+          <div class="wrapper col1"  style="padding-left: 20%">
+  <div id="container" class="clear"> 
+   
+    <div id="content">
+      <h1>About Student Portal</h1>
+      <h:graphicImage class="imgr" value="../images/avatar1.jpg" alt="" width="125" height="125" />
+      <p>A learner who has enrolled in an online certification program, for example, may use a student portal to access online course materials that are hosted on the school’s servers, such as articles, lectures and videos. .</p>
+      <p>Student portals may be used to provide information about the school, course details, calendars, academic resources, and contact information..</p>
+   
+      <p>Some student portals may integrate with other systems to provide students with easy access to personal information, such as tracking financial aid disbursements and using campus medical services.</p>
+        
+      <div id="comments">
+        <h2>Comments</h2>
+        <ul class="commentlist">
+          
+            
+            
+                         <h:form>
+
+          <h:dataTable id="tbl"  value="#{register.regList1}" var="Studentd"    
+                       >
+		
+            
+             <li class="comment_even">
+                 <div class="author"><span class="name"><a href="#"><h:column> <f:facet name="header">Name</f:facet>#{Studentd.sname}</h:column></a></span> <span class="wrote">wrote:</span></div>
+                 <div class="submitdate"><a href="#"><h:column> <f:facet name="header">Email</f:facet> #{Studentd.semail}</h:column></a></div>
+                 <p><h:column> <f:facet name="header">Comment Box</f:facet> #{Studentd.descbox}</h:column></p>
+          </li>
+           
+          </h:dataTable>  
+                </h:form>
+
+            
+        </ul>
+        
+        
+      </div>
+       <h:form>
+      <h2>Write A Comment</h2>
+      <div id="respond">
+     
+          <p>
+              <p:inputText  value="#{javause.sname}"  id="sname">
+                    <f:validateLength minimum="5" maximum="10"></f:validateLength>
+                     </p:inputText>
+                     <h:message for="sname" style="color:red"></h:message>
+                      
+            <label for="sname"><small>Name (required)</small></label>
+          </p>
+          <p>
+              <p:inputText  value="#{javause.semail}"  id="semail">
+                    <f:validateLength minimum="5" maximum="40"></f:validateLength>
+                     </p:inputText>
+                     <h:message for="semail" style="color:red"></h:message>
+            <label for="semail"><small>Mail (required)</small></label>
+          </p>
+          <p>
+              <h:inputTextarea  value="#{javause.descbox}" id="comment"  rows="10"></h:inputTextarea>
+            <label for="comment" style="display:none;"><small>Comment (required)</small></label>
+          </p>
+          <p>
+              <h:commandButton  type="submit" id="submit" value="Submit Form" action="#{javause.inserttable2(javause.sname, javause.semail, javause.descbox)}" />
+            
+            
+    
+          </p>
+      
+      </div>
+      </h:form>
+    </div>
+
+    
+  </div>
+</div>
+          
+          
+
+      </ui:define></ui:composition>
+      
+   </h:body>
+</html>
