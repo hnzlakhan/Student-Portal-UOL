@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Navigation CSS
+*/
+
+ul#topnav{display:block; float:right; clear:right; width:100%; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; text-transform:uppercase;}
+ul#topnav, ul#topnav li{margin:0; padding:0; list-style:none;}
+ul#topnav li{float:right; margin-left:30px;}
+ul#topnav li li{margin-left:0;}
+ul#topnav li a:link, ul#topnav li a:visited, ul#topnav li a:hover{display:block; margin:0; padding:0; color:#DCDCDC; background-color:#0F1719;}
+ul#topnav ul li a:link, ul#topnav ul li a:visited{border:none;}
+ul#topnav li a:hover, ul#topnav li.active a{color:#FF412C; background-color:#0F1719;}
+ul#topnav li li a:link, ul#topnav li li a:visited{width:150px; float:none; margin:0; padding:7px 10px; font-size:12px; font-weight:normal; color:#DCDCDC; background-color:#0F1719;}
+ul#topnav li li a:hover{color:#FF412C; background-color:#0F1719;}
+ul#topnav ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px;}
+ul#topnav ul a{width:140px;}
+ul#topnav li:hover ul{left:auto;}
+ul#topnav li:hover{position:static;}
+ul#topnav li.last{margin-right:0;}
+
+/* ----------------------------------------------Column Navigation------------------------------------- */
+
+#column .subnav{display:block; width:250px; padding:25px; background-color:#1F1F1F; margin-bottom:30px;}
+#column .subnav h2{margin:0 0 20px 0; padding:0 0 14px 0; font-size:20px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif; color:#666666; background-color:#1F1F1F; line-height:normal; border-bottom:1px dashed #666666;}
+#column .subnav ul{margin:0; padding:0; list-style:none;}
+#column .subnav li{margin:0 0 3px 0; padding:0;}
+#column .subnav ul ul, #column .subnav ul ul ul, #column .subnav ul ul ul ul, #column .subnav ul ul ul ul ul{border-top:none; padding-top:0;}
+#column .subnav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("images/red_file.gif") 10px center no-repeat #1F1F1F; text-decoration:none; border-bottom:1px dotted #666666;}
+#column .subnav a:hover{color:#FF412C; background-color:#161616;}
+#column .subnav ul ul a, #column .subnav ul ul ul a, #column .subnav ul ul ul ul a, #column .subnav ul ul ul ul ul a{background:url("images/white_file.gif") no-repeat #1F1F1F;}
+#column .subnav ul ul a{padding-left:40px; background-position:30px center;}
+#column .subnav ul ul ul a{padding-left:50px; background-position:40px center;}
+#column .subnav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#column .subnav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}
+
+/* ----------------------------------------------Pagination------------------------------------- */
+
+.pagination{display:block; width:100%; text-align:center; clear:both;}
+.pagination ul{margin:0; padding:0; list-style:none;}
+.pagination li{display:inline;}
+.pagination .next{margin:0;}
+.pagination a{display:inline-block; padding:2px 5px 3px 5px; margin:0 2px 0 0; border:1px solid #2C2C2C;}
+.pagination .current, .pagination .splitter{padding:6px; margin:0 2px 0 0;}
+.wrapper .pagination a:hover, .pagination .current, .pagination .splitter{color:#FFFFFF; background-color:#000000;}

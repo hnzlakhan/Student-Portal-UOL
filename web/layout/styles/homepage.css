@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Homepage CSS
+*/
+
+#homepage{padding:50px 0;}
+#homepage a, #homepage img{border:none;}
+.wrapper #homepage h2{display:block; margin-bottom:20px; text-align:center; font-size:36px; text-transform:uppercase;}
+#homepage ul, #homepage p{margin:0; padding:0; list-style:none;}
+#homepage p{float:left; padding-bottom:26px; background:url("images/featured_shadow_l.gif") bottom center no-repeat;}
+#homepage p img{width:658px; height:432px;}
+#homepage p img, #homepage ul{padding:20px; color:#3A3A3A; background-color:#000000; border:1px solid #CCCCCC;}
+#homepage .fl_right{padding:12px 0 26px 0; background:url("images/featured_shadow_r.gif") bottom center no-repeat;}
+#homepage li{margin:0 0 10px 0;}
+#homepage li.last{margin-bottom:0;}
+#homepage li img{width:192px; height:75px;}
+
+/* ----------------------------------------------Image Line------------------------------------- */
+
+#hpage_services{padding:0 0 30px 0; border-bottom:1px solid #444444;}
+#hpage_services ul{margin:0; padding:0; list-style:none;}
+#hpage_services li{position:relative; display:block; float:left; width:290px; height:120px; margin:0 30px 0 0; padding:4px; border:1px solid #444444; overflow:hidden;}
+#hpage_services .last{margin-right:0;}
+#hpage_services li span{overflow:hidden; width:100%; z-index:1; margin:0; padding:10px 0; text-align:center; color:#9FA4AA; background:#000000;}
+
+/* ----------------------------------------------Main Info Area------------------------------------- */
+
+#hpage_info{padding:30px 0 0 0; line-height:1.6em;}
+#hpage_info .fl_left{width:290px;}
+#hpage_info .fl_right{width:625px;}
+#hpage_info h2.title{margin:0 0 30px 0; padding:0; font-size:42px; color:#333333; background-color:#000000;}
+#hpage_info ul, #hpage_info li{display:block; width:100%; margin:0; padding:0; list-style:none;}
+#hpage_info li{margin:0 0 25px 0; padding:0 0 15px 0; border-bottom:1px dotted #444444;}
+#hpage_info li.last{margin:0; padding:0; border-bottom:none;}
+#hpage_info p.name{margin:0; padding:0; font-size:16px; font-weight:bold;}
+#hpage_info div.imgholder{display:block; float:left; margin:0 15px 15px 0; padding:4px; border:1px solid #444444;}
+#hpage_info p.readmore{margin:0; padding:0; text-align:right; line-height:normal;}
